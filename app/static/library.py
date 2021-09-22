@@ -83,12 +83,10 @@ def sortnumber2():
 
 	# Your code should start from here
 	# store the final string to the variable array_str
-	list_of_values = value.split(", ")
+	list_of_values = value.split(",")
 	new_list = [int(i) for i in list_of_values]
 	bubble_sort(new_list)
-	array_string2 = str(new_list)
-	array_str = array_string2[1:-1] + "."
+	array_string2 = [str(i) for i in new_list]
+	array_str = ",".join(array_string2) + "."
 	pass
 	document.getElementById("sorted").innerHTML = array_str
-
-
